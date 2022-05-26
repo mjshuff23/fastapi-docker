@@ -1,12 +1,14 @@
 import uvicorn
 from fastapi import FastAPI
 
+# from models import User
+
 app = FastAPI()
 
 
-@app.post("/user/", response_model=User)
-def create_user(user: User):
-    return user
+# @app.post("/user/", response_model=User)
+# def create_user(user: User):
+#     return user
 
 
 if __name__ == "__main__":
