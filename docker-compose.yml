@@ -18,7 +18,13 @@ services:
       - "8000:8000"
     depends_on:
       - db
-
+  frontend:
+    build: .
+    command: bash -c "npm run dev"
+    volumes:
+      - .:/code/frontend
+    ports:
+      - "3000:3000"
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
